@@ -14,7 +14,7 @@ const urlValidator = (req, res, next) => {
   console.log(url);
   dns.lookup(url, (err, address, family) => {
     console.log(address);
-    if (address == undefined) return res.json({ msg: err });
+    if (address == undefined) return res.json({ error: 'invalid url' });
     next();
   });
 };
