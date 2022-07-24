@@ -5,7 +5,12 @@ const router = express.Router();
 const urlValidator = (req, res, next) => {
   let url = req.body.url;
   const regexHttps = /https*:\/\//;
+  const regexDotSlash = /\b\/{1}\b/;
+  const urlSplittedDotSlashArray = url.split(regexDotSlash);
+  url = urlSplittedDotSlashArray[0];
+  console.log(url);
   const urlSplittedArray = url.split(regexHttps);
+
   if (urlSplittedArray.length == 1) {
     url = urlSplittedArray[0];
   } else {
