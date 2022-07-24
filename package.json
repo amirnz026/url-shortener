@@ -8,13 +8,27 @@
     "dev": "nodemon index.js"
   },
   "dependencies": {
-    "body-parser": "^1.19.0",
+    "body-parser": "^1.20.0",
     "cors": "^2.8.5",
-    "dotenv": "^8.2.0",
-    "express": "^4.17.1"
+    "dotenv": "^8.6.0",
+    "express": "^4.18.1",
+    "mongoose": "^6.4.6"
   },
   "license": "MIT",
   "devDependencies": {
-    "nodemon": "^2.0.4"
-  }
+    "nodemon": "^2.0.19"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amirnz026/url-shortener.git"
+  },
+  "keywords": [],
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/amirnz026/url-shortener/issues"
+  },
+  "engines": {
+	"node": "18.x"
+},
+  "homepage": "https://github.com/amirnz026/url-shortener#readme"
 }
