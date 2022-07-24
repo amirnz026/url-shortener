@@ -23,7 +23,7 @@ router.post('/', urlValidator, async (req, res) => {
     if (foundUrl) {
       return res.json({
         original_url: foundUrl.original_url,
-        shortUrl: foundUrl.short_url,
+        short_url: foundUrl.short_url,
       });
     }
   } catch (err) {
