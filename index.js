@@ -24,7 +24,10 @@ app.get('/api/hello', function (req, res) {
 
 const port = process.env.PORT || 3000;
 
-mongoose.connect(process.env.DB_CONNECTION, { useNewUrlParser: true });
+mongoose.connect(process.env.DB_CONNECTION, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
 const db = mongoose.connection;
 db.on('error', (error) => console.error(error));
 db.once('open', () => console.log('connected to db'));
